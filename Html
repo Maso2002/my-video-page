@@ -1,0 +1,29 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>شاهد الفيديو بعد حل الكابتشا</title>
+       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+   </head>
+   <body>
+       <h1>حل الكابتشا لمشاهدة الفيديو</h1>
+       <div class="g-recaptcha" data-sitekey="ae8f51fd40b88666c184dc1a0437bc69"></div>
+       <button id="submit">تحقق وابدأ الفيديو</button>
+       <div id="video-container" style="display:none;">
+           <h2>شاهد الفيديو الآن:</h2>
+           <iframe src="https://t.me/mero19xi/https://t.me/mero19xi/2" width="600" height="400" allowfullscreen></iframe>
+       </div>
+       <script>
+           document.getElementById('submit').onclick = function() {
+               var response = grecaptcha.getResponse();
+               if(response.length == 0) {
+                   alert("يرجى التحقق من أنك لست روبوتًا.");
+               } else {
+                   document.getElementById('video-container').style.display = 'block';
+               }
+           };
+       </script>
+   </body>
+   </html>
+   
